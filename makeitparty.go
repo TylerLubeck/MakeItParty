@@ -44,6 +44,7 @@ func main() {
 
 	log.SetLevel(log.DebugLevel)
 	log.SetOutput(logFile)
+	log.SetOutput(os.Stderr)
 
 	log.WithFields(log.Fields{
 		"version":    version,
