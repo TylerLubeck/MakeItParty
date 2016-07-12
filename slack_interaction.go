@@ -80,7 +80,7 @@ func HandleSlackEvents(s *slack.Client) {
 				}).Info("Channel List Modified")
 
 			case *slack.GroupJoinedEvent:
-				channelIDs.Remove(ev.Channel)
+				channelIDs.Add(ev.Channel)
 
 				log.WithFields(log.Fields{
 					"channel_id": ev.Channel,
