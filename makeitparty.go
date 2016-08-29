@@ -34,16 +34,7 @@ func get_config(file_name string) (*Configuration, error) {
 
 func main() {
 
-	logFile, err := os.OpenFile("./makeitparty.log", os.O_WRONLY, 0666)
-
-	if err != nil {
-		panic(err)
-	}
-
-	defer logFile.Close()
-
 	log.SetLevel(log.DebugLevel)
-	log.SetOutput(logFile)
 	log.SetOutput(os.Stderr)
 
 	log.WithFields(log.Fields{
