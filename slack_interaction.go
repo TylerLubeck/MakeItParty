@@ -29,6 +29,7 @@ var parrots = []string{
 	"shuffleparrot",
 	"shufflepartyparrot",
 	"slowparrot",
+	"bradford",
 }
 
 func HandleSlackEvents(s *slack.Client) {
