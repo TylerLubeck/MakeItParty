@@ -16,6 +16,7 @@ var parrots = []string{
 	"dealwithitparrot",
 	"explodyparrot",
 	"fastparrot",
+	"fieriparrot",
 	"fiestaparrot",
 	"gothparrot",
 	"ice-cream-parrot",
