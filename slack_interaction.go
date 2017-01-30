@@ -4,6 +4,7 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/deckarep/golang-set"
 	"github.com/nlopes/slack"
+	"math/rand"
 )
 
 var parrots = []string{
@@ -160,8 +161,9 @@ func handleAddReaction(s *slack.Client, event *slack.ReactionAddedEvent, validCh
 		}).Info("Making it party")
 
 		msgRef := slack.NewRefToMessage(event.Item.Channel, event.Item.Timestamp)
-		for _, parrot := range parrots {
-			s.AddReaction(parrot, msgRef)
+		indexes := rand.Perm(len(parrots))
+		for _, parrotIndex := range indexes[:23] {
+			s.AddReaction(parrots[parrotIndex], msgRef)
 		}
 	}
 }
