@@ -1,4 +1,5 @@
 BINARY=makeitparty
+DEPLOY_BINARY=ubuntu-${BINARY}
 VERSION=0.2.0
 BUILD_TIME=`date +%FT%T%z`
 
@@ -14,4 +15,7 @@ $(BINARY): $(SOURCES)
 	go build ${LDFLAGS} -o ${BINARY} $(SOURCES)
 
 deployable: $(SOURCES)
-	env GOOS=linux GOARCH=amd64 go build ${LDFLAGS} -o ubuntu-${BINARY} $(SOURCES)
+	env GOOS=linux GOARCH=amd64 go build ${LDFLAGS} -o ${DEPLOY_BINARY} $(SOURCES)
+
+clean:
+	rm -f ${DEPLOY_BINARY} ${BINARY}
