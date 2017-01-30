@@ -8,6 +8,7 @@ import (
 
 var parrots = []string{
 	"aussieparrot",
+	"aussiecongaparrot",
 	"boredparrot",
 	"chillparrot",
 	"congaparrot",
@@ -29,6 +30,14 @@ var parrots = []string{
 	"shuffleparrot",
 	"shufflepartyparrot",
 	"slowparrot",
+	"harrypotterparrot",
+	"parrotmustache",
+	"creepyparrot",
+	"parrotbeer",
+	"bluescluesparrot",
+	"blondesassyparrot",
+	"burgerparrot",
+	"witnessprotectionparrot",
 	"bradford",
 }
 
