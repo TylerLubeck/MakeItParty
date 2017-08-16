@@ -1,6 +1,6 @@
 BINARY=makeitparty
 DEPLOY_BINARY=ubuntu-${BINARY}
-VERSION=0.2.0
+VERSION=0.3.0
 BUILD_TIME=`date +%FT%T%z`
 
 .DEFAULT_GOAL: $(BINARY)
